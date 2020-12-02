@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
-export default function Counter(props) {
+export default function Random(props) {
   const value = props.value;
   const label = props.label;
   return (
