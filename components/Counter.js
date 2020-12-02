@@ -1,5 +1,5 @@
 // Hook useState importieren
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
 // Früher brauchten wir Klassen für Zustand (state)
@@ -17,6 +17,18 @@ export default function Counter({ label, value }) {
   // [counter, setCounter] ist eine Array-Destrukturierung
   // counter --> this.state.counter in Klassen
   // setCounter(newVal) --> this.setState({counter: newVal}) in Klassen
+
+  // TODO: componentDidMount "nachbilden"
+  // mit useEffect können Seiteneffekte definiert werden
+  // keine Parameter -> Callback wird bei jeder state-Änderung ausgeführt
+  // [] als Parameter -> componentDidMount
+  useEffect(() => {
+    console.log('useEffect in ' + label);
+  }, []);
+
+  useEffect(() => {
+    console.log('useEffect with counter in ' + label);
+  }, [counter]);
 
   return (
     <View>
