@@ -1,14 +1,13 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import Counter from './components/Counter';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.counter}>123</Text>
-      <Button
-        title="Button1"
-        onPress={() => alert('Es klappt!!!!')}
-      />
+      <Counter value="0" />
+      <Counter value="10" />
+      <Counter value="100" />
     </View>
   );
 }
@@ -19,9 +18,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  counter: {
-    color: 'orange',
-    fontSize: 82,
   },
 });
