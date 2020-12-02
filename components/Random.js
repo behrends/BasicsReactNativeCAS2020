@@ -12,7 +12,7 @@ export default function Random({ label, value }) {
 
 const styles = StyleSheet.create({
   counter: {
-    color: 'orange',
+    color: 'red',
     fontSize: 82,
   },
 });
